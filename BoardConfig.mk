@@ -196,4 +196,4 @@ OF_FL_PATH1 := /sys/devices/platform/flashlights_mt6789
 OF_MAINTAINER :=  @senyaml, @RAFI_ASYDDIQ for source
 
 # Maintainer specific settings
-TW_DEVICE_VERSION := @senyaml, @RAFI_ASYDDIQ for source @risye for tester
+TW_DEVICE_VERSION := @senyaml, @RAFI_ASYDDIQ for source @Risye for tester
