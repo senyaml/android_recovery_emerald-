@@ -11,7 +11,6 @@ on init
     setprop sys.usb.controller "musb-hdrc"
     setprop sys.usb.ffs.aio_compat 1
     setprop crypto.ready 1
-    umount -l /dev/block/mapper/vendor
 
 on fs
     install_keyring
@@ -107,3 +106,5 @@ on boot
     start health-hal-2-1
     start vibratorfeature-hal-service
     setprop sys.usb.config adb
+    umount -f /dev/block/mapper/vendor
+    umount -f /vendor
