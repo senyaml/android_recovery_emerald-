@@ -1,9 +1,3 @@
-# Flashable logical partitions
-/system_image             emmc      /dev/block/bootdevice/by-name/system             flags=backup;flashimg
-/vendor_image             emmc      /dev/block/bootdevice/by-name/vendor             flags=backup;flashimg
-/system_ext_image         emmc      /dev/block/bootdevice/by-name/system_ext         flags=display="System_EXT Image";backup;flashimg
-/product_image            emmc      /dev/block/bootdevice/by-name/product            flags=display="Product Image";backup;flashimg                    
-
 # Android fstab file.
 /metadata           ext4  /dev/block/by-name/metadata                    flags=display="Metadata";backup=1
 /data	            f2fs  /dev/block/by-name/userdata                    flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption
@@ -64,6 +58,12 @@
 /seccfg             auto   /dev/block/by-name/seccfg                     flags=display="Seccfg"
 /protect1           auto   /dev/block/by-name/protect1                   flags=display="Protect1"
 /protect2           auto   /dev/block/by-name/protect2                   flags=display="Protect2"
+
+# Images
+/system_image       emmc  /dev/block/mapper/system                       flags=backup=1;display="System Image";slotselect;flashimg=1
+/system_ext_image   emmc  /dev/block/mapper/system_ext                   flags=backup=1;display="System_ext Image";slotselect;flashimg=1
+/vendor_image       emmc  /dev/block/mapper/vendor                       flags=backup=1;display="Vendor Image";slotselect;flashimg=1
+/product_image      emmc  /dev/block/mapper/product                      flags=backup=1;display="Product Image";slotselect;flashimg=1
 
 # Removable Storage
 /external_sd        auto  /dev/block/mmcblk1p1  /dev/block/mmcblk0p1     flags=display="External_SDcard";storage;wipeingui;removable
