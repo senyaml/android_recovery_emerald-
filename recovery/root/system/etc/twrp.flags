@@ -1,4 +1,8 @@
-                      flags=backup=1;display="Product Image";slotselect;flashimg=1
+# Flashable logical partitions
+/system_image             emmc      /dev/block/bootdevice/by-name/system             flags=backup;flashimg
+/vendor_image             emmc      /dev/block/bootdevice/by-name/vendor             flags=backup;flashimg
+/system_ext_image         emmc      /dev/block/bootdevice/by-name/system_ext         flags=display="System_EXT Image";backup;flashimg
+/product_image            emmc      /dev/block/bootdevice/by-name/product            flags=display="Product Image";backup;flashimg                    
 
 # Android fstab file.
 /metadata           ext4  /dev/block/by-name/metadata                    flags=display="Metadata";backup=1
