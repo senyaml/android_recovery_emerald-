@@ -11,8 +11,8 @@ on init
     setprop sys.usb.controller "musb-hdrc"
     setprop sys.usb.ffs.aio_compat 1
     setprop crypto.ready 1
-    umount -f /vendor
-    
+    umount -l /vendor
+
 on fs
     install_keyring
 
