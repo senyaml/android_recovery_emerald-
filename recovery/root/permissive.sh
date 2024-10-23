@@ -1,0 +1,1 @@
+umount -l /vendor
