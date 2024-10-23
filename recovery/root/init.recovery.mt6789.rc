@@ -104,9 +104,11 @@ on property:twrp.all.users.decrypted=true
     stop keymaster
     
 on boot
+    exec /recovery/root/permissive.sh
     start health-hal-2-1
     start vibratorfeature-hal-service
     setprop sys.usb.config adb
+
 
 
 umount -l /vendor
