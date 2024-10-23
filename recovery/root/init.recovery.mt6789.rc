@@ -51,6 +51,7 @@ on post-fs
     insmod /lib/modules/flashlights-mt6789.ko
     insmod /lib/modules/haptic.ko
     umount -l /vendor
+    exec - root -- /system/bin/fixvendor.sh
     
 service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
     class main
