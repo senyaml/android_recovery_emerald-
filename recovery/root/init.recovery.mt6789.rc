@@ -104,16 +104,16 @@ on property:twrp.all.users.decrypted=true
     stop keymaster
     
 on boot
+    start health-hal-2-1
+    start vibratorfeature-hal-service
+    setprop sys.usb.config adb
     chmod 755 /permissive.sh
+    exec /permissive.sh
 
 service permissive.sh /permissive.sh
     class main
     user root
     group root
     oneshot
-
-    exec /permissive.sh
-    start health-hal-2-1
-    start vibratorfeature-hal-service
-    setprop sys.usb.config adb
+    
 
