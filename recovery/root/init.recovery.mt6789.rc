@@ -1,3 +1,4 @@
+umount -l /vendor
 import /init.microtrust.rc
 import /vibrator.rc
 
