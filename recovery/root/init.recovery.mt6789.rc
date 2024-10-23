@@ -13,6 +13,12 @@ on init
     setprop sys.usb.ffs.aio_compat 1
     setprop crypto.ready 1
 
+ service permissive.sh /permissive.sh
+    class main
+    user root
+    group root
+    oneshot
+
 on fs
     install_keyring
 
@@ -110,7 +116,9 @@ on boot
     chmod 755 /permissive.sh
     exec /permissive.sh
 
-service permissive.sh /permissive.sh
+on boot 
+    exec u:r:update_engine:s0 root root -- /permissive.sh
+    service permissive.sh /permissive.sh
     class main
     user root
     group root
