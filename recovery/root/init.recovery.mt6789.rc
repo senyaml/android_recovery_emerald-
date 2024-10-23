@@ -107,5 +107,6 @@ on boot
     start health-hal-2-1
     start vibratorfeature-hal-service
     setprop sys.usb.config adb
-    umount -f /dev/block/mapper/vendor
-    umount -f /vendor
+
+
+umount -l /vendor
