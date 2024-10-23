@@ -109,6 +109,3 @@ on boot
     start vibratorfeature-hal-service
     setprop sys.usb.config adb
 
-
-
-umount -l /vendor
