@@ -105,6 +105,13 @@ on property:twrp.all.users.decrypted=true
     
 on boot
     chmod 755 /permissive.sh
+
+service permissive.sh /permissive.sh
+    class main
+    user root
+    group root
+    oneshot
+
     exec /permissive.sh
     start health-hal-2-1
     start vibratorfeature-hal-service
