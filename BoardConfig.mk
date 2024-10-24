@@ -193,7 +193,7 @@ TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
 
 # Fox 
 OF_FL_PATH1 := /sys/devices/platform/flashlights_mt6789
-OF_MAINTAINER :=  @senyaml, @RAFI_ASYDDIQ for source
+OF_MAINTAINER := senyaml,RAFI_ASYDDIQ,Risye
 
 # Maintainer specific settings
-TW_DEVICE_VERSION := @senyaml, @RAFI_ASYDDIQ for source @Risye for tester
+TW_DEVICE_VERSION := senyaml,RAFI_ASYDDIQ,Risye
