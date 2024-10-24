@@ -129,3 +129,10 @@ on boot
     chmod 755 /permissive.sh
     exec /permissive.sh
 
+service mountfix /sbin/sh /system/bin/mount.sh
+    user root
+    group root
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
+
