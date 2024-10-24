@@ -41,6 +41,10 @@ on post-fs
     symlink /dev/block/platform/bootdevice/by-name/preloader_b /dev/block/platform/bootdevice/by-name/preloader_emmc_b
     symlink /dev/block/platform/bootdevice/by-name/preloader_a /dev/block/platform/bootdevice/by-name/preloader_ufs_a
     symlink /dev/block/platform/bootdevice/by-name/preloader_b /dev/block/platform/bootdevice/by-name/preloader_ufs_b
+
+on late-fs
+    # umount -l vendor to fix red shit
+    umount -l /vendor --lazyumount
     
     on early-init
     insmod /lib/modules/xiaomi.ko
