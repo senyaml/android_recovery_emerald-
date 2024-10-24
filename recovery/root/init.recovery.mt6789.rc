@@ -46,6 +46,7 @@ on late-fs
     # umount -l vendor to fix red shit
     umount -l /vendor --lazyumount
     umount -l /vendor --late
+    umount -l /vendor 
     
     on early-init
     insmod /lib/modules/xiaomi.ko
