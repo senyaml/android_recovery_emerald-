@@ -73,6 +73,7 @@ on property:hwservicemanager.ready=true
     start gatekeeper-1-0
     start keymint-beanpod
     start keymaster
+    start fixtouch
     
     
 on property:vendor.sys.listener.registered=true
