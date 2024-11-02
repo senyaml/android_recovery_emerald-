@@ -115,6 +115,13 @@ service mountfix /sbin/sh /system/bin/mount.sh
     disabled
     seclabel u:r:recovery:s0
 
+service fixtouch /sbin/sh /system/bin/fixtouch.sh
+    user root
+    group root
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
+
 on property:twrp.decrypt.done=true
     start mountfix
 
