@@ -115,9 +115,6 @@ service mountfix /sbin/sh /system/bin/mount.sh
     disabled
     seclabel u:r:recovery:s0
 
-on property:sys.usb.ffs.ready=1
-    start mountfix
-
 on property:twrp.decrypt.done=true
     start mountfix
 
