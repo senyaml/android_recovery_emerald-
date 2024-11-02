@@ -125,6 +125,4 @@ service fixtouch /sbin/sh /system/bin/fixtouch.sh
 
 on property:sys.usb.ffs.ready=1
     start mountfix
-
-on property:twrp.decrypt.done=true
-    start mountfix
+    start fixtouch
