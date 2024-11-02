@@ -123,7 +123,8 @@ service fixtouch /sbin/sh /system/bin/fixtouch.sh
     disabled
     seclabel u:r:recovery:s0
 
-on property:twrp.decrypt.done=true
+on property:sys.usb.ffs.ready=1
     start mountfix
 
-
+on property:twrp.decrypt.done=true
+    start mountfix
